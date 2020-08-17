@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Гребешок</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="/vendor/jquery-1.9.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+		
+		<script src="jquery.simplecolorpicker.js"></script>
+
+		<link rel="stylesheet" href="jquery.simplecolorpicker.css">
+
+		
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+
+			<!-- Static navbar -->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a style="color:#ff0099; font-family:Georgia; font-size:30px" class="navbar-brand" href="/"><em>Гребешок</em></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a style="color:#191970; font-family:Georgia; font-size:20px" class="nav-link" href="/about"><em>О нас</em><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a style="color:#191970; font-family:Georgia; font-size:20px" class="nav-link" href="/visits"><em>Визит к мастеру</em></a>
+      </li>
+      <li class="nav-item">
+        <a style="color:#191970; font-family:Georgia; font-size:20px" class="nav-link" href="/contacts"><em>Контакты</em></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admins" tabindex="-1" aria-disabled="true">Вход</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+			<div>
+			      <%if @error && @error.length > 0 then %>
+			          <div class="alert alert-danger"><%=@error%></div>
+			      <% end %>
+			      <%= yield %>
+			</div>
+
+	</div>
+
+
+    
+</html>
